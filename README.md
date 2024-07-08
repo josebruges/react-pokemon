@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Challenges to Resolve
+
+### Reto 1: Corregir funcionamiento de la aplicación (5 mins)
+
+**Descripción:** Busca por qué la aplicación no está funcionando y corrige el error.  
+**Instrucciones:** Validar el manejo de promesas.
+
+### Reto 2: Mejorar el Manejo de Errores (10 mins)
+
+**Descripción:** Mejora el manejo de errores en las funciones `getPokemonInfo`, `getData` y `handleSearchPokemon`. Muestra mensajes de error al usuario usando un componente de notificación de Ant Design.  
+**Instrucciones:**
+- Añade un componente de notificación para mostrar errores.
+- Modifica las funciones asincrónicas para manejar errores y mostrar un mensaje de error al usuario.
+
+### Reto 3: Implementar un Paginador (15 mins)
+
+**Descripción:** Corrige la renderización en “cargar más” e implementa un paginador que permita al usuario navegar entre diferentes páginas de la lista de Pokémon.  
+**Instrucciones:**
+- Utiliza el componente Pagination de Ant Design.
+- Añade el paginador en la parte inferior de la lista de Pokémon.
+- Modifica el estado y las funciones necesarias para que el paginador funcione correctamente.
+
+### Reto 4: Refactorizar (5 mins)
+
+**Descripción:** En el componente `PokemonList`, se ha implementado un renderizado condicional que muestra dos listas de Pokémon: una lista filtrada (`searchList`) y una lista completa (`pokemons`). Actualmente, el código presenta duplicación y podría optimizarse para mejorar la legibilidad y el rendimiento.  
+**Instrucciones:** Refactoriza el código para eliminar la duplicación y mejorar la estructura del renderizado condicional de las listas de Pokémon. Asegúrate de mantener la funcionalidad existente de mostrar y cargar Pokémon, así como la funcionalidad de detalle de Pokémon (`PokemonDetail`).
+
+**Consideraciones Adicionales:**
+- Puedes modificar la estructura del código según consideres necesario, siempre y cuando mantengas la funcionalidad requerida.
+- Asegúrate de mantener la estructura de filas y columnas (Row y Col) para el diseño.
+
+### Reto 5: Mensaje de "No Encontrado" en Búsqueda de Pokémon (10 mins)
+
+**Descripción:** En el actual componente `PokemonList`, la función de búsqueda (`handleSearchPokemon`) filtra la lista de Pokémon según el nombre proporcionado por el usuario. Sin embargo, cuando no se encuentran resultados para la búsqueda, no se muestra ningún mensaje al usuario.  
+**Instrucciones:**
+- Modificación de la Función de Búsqueda: Actualiza la función `handleSearchPokemon` para que, cuando la búsqueda no devuelva resultados (es decir, `filterPokemons` esté vacío), establezca el estado `searchEmpty` en `true`.
+- Renderización del Mensaje de "No Encontrado": En el componente `PokemonList`, modifica el JSX para que, cuando `searchEmpty` sea `true`, muestre un mensaje indicando que no se encontraron Pokémon con el nombre buscado.
+
+### Reto 6: Mostrar la información del Pokémon al darle click sobre la tarjeta (5 mins)
+
+**Descripción:** Valida por qué al darle click encima del Pokémon no se muestra la información detallada.  
+**Instrucciones:** Manejo de estados.
